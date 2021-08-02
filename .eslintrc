@@ -1,0 +1,42 @@
+{
+  "extends": [
+    "plugin:eslint-comments/recommended",
+    "plugin:promise/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "eslint-comments",
+    "promise",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "rules": {
+    "no-debugger": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
+    "no-console": "off",
+    "no-shadow": "off",
+    "lines-between-class-members": "off",
+    "class-methods-use-this": "off",
+    "no-prototype-builtins": "off",
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/no-null": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ]
+  }
+}

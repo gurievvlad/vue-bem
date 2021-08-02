@@ -31,6 +31,9 @@
     "unicorn/no-null": "off",
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
+    "operator-linebreak": ["off", "none", { "overrides": { "?": "before", ":": "before" } }],
+    "implicit-arrow-linebreak": ["off", "beside"],
+    "max-len": ["error", 100],
     "quotes": [
       "error",
       "single",

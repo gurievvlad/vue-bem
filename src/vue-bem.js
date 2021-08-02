@@ -1,4 +1,4 @@
-import createBem from './bem';
+import createBem from './bem/index';
 
 export default {
   /** @todo Описать config */
@@ -7,7 +7,9 @@ export default {
 
     app.mixin({
       created() {
-        this[options.methodName] = bemInstants(this.block || this.name);
+        this[options.methodName || 'b'] = bemInstants(
+          this.$options.block || this.$options.name,
+        );
       },
     });
   },

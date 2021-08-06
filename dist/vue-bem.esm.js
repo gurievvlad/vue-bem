@@ -169,7 +169,7 @@ var vueBem = {
    * @param {BemPlugConfig} options
    */
   install: (app, options) => {
-    const bemInstants = createBem(options);
+    const bemInstants = createBem(options || defaultConf);
 
     app.mixin({
       created() {

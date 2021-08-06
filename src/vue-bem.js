@@ -1,4 +1,4 @@
-import createBem from './bem/index';
+import createBem, { defaultConf } from './bem/index';
 
 /**
  * @typedef {object} BemPlugConfig
@@ -17,7 +17,7 @@ export default {
    * @param {BemPlugConfig} options
    */
   install: (app, options) => {
-    const bemInstants = createBem(options);
+    const bemInstants = createBem(options || defaultConf);
 
     app.mixin({
       created() {

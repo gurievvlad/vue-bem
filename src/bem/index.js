@@ -70,7 +70,7 @@ const addModifications = mods => delimiters => acc => {
 };
 
 /** @type BemPlugConfig */
-const defaultConf = {
+export const defaultConf = {
   hyphenate: false,
   methodName: 'b',
   delimiters: {

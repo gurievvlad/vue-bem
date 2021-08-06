@@ -116,7 +116,7 @@ const createBem = (config = defaultConf) =>
      * b('home-page', 'header) // home-page__header
      * b('home-page', 'header, { dark: true }) // home-page__header home-page__header--dark
      */
-    function b(...args) {
+    return function b(...args) {
       const conf = {
         ...defaultConf,
         ...config,

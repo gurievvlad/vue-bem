@@ -69,15 +69,15 @@ const addElement = el => delimiters => acc =>
 
 const addModifications = mods => delimiters => acc => {
   if (isArray(mods)) {
-    return mods.reduce((a, b) => `${a} ${acc}${delimiters.mod}${b} `, acc);
+    return mods.reduce((a, b) => `${a} ${acc}${delimiters.mod}${b}`, acc);
   }
   if (isObject(mods)) {
     return Object.keys(mods).reduce((a, prop) => {
       if (isString(mods[prop]) || isNumber(mods[prop])) {
-        return `${a} ${acc}${delimiters.mod}${prop}${delimiters.modVal}${mods[prop]} `;
+        return `${a} ${acc}${delimiters.mod}${prop}${delimiters.modVal}${mods[prop]}`;
       }
       if (isBoolean(mods[prop])) {
-        return mods[prop] ? `${a} ${acc}${delimiters.mod}${prop} ` : a;
+        return mods[prop] ? `${a} ${acc}${delimiters.mod}${prop}` : a;
       }
       return a;
     }, acc);
@@ -87,7 +87,7 @@ const addModifications = mods => delimiters => acc => {
 
 /** @type BemPlugConfig */
 const defaultConf = {
-  hyphenate: false,
+  hyphenate: true,
   methodName: 'b',
   delimiters: {
     el: '__',
